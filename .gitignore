@@ -1,3 +1,6 @@
 # tooling scratch
 .commandcode/
 .DS_Store
+# generated figure output (rebuild: node figures/seismic-node/build.mjs)
+figures/seismic-node/*.html
+figures/kit/iso.css
