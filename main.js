@@ -17,9 +17,9 @@ const COARSE  = matchMedia('(hover: none)').matches;
 /* ── the palette, read from CSS so themes just work ──────────── */
 const C = {
   get ink()  { return getComputedStyle(document.documentElement).getPropertyValue('--ink').trim() || '#CFC8BA'; },
-  get ink3() { return getComputedStyle(document.documentElement).getPropertyValue('--ink-3').trim() || 'rgba(207,200,186,.4)'; },
+  get ink3() { return getComputedStyle(document.documentElement).getPropertyValue('--ink-3').trim() || 'rgba(207,200,186,.62)'; },
   get ink4() { return getComputedStyle(document.documentElement).getPropertyValue('--ink-4').trim() || 'rgba(207,200,186,.22)'; },
-  get rule() { return getComputedStyle(document.documentElement).getPropertyValue('--rule').trim() || 'rgba(207,200,186,.15)'; },
+  get rule() { return getComputedStyle(document.documentElement).getPropertyValue('--rule').trim() || 'rgba(207,200,186,.22)'; },
   get rule2(){ return getComputedStyle(document.documentElement).getPropertyValue('--rule-2').trim() || 'rgba(207,200,186,.08)'; },
   get amber(){ return getComputedStyle(document.documentElement).getPropertyValue('--amber').trim() || '#E0A94A'; },
   get red()  { return getComputedStyle(document.documentElement).getPropertyValue('--red').trim() || '#D9614C'; },
@@ -282,11 +282,14 @@ function trace(cv, opts = {}) {
     return v;
   }
 
-  function paint() {
+  function paint(advance = true) {
     const { ctx, w, h } = dims;
-    buf[head] = sample(performance.now());
-    head = (head + 1) % N;
-    peak = Math.max(peak * .995, Math.abs(buf[head - 1]), 0.0001);
+    if (advance) {
+      buf[head] = sample(performance.now());
+      head = (head + 1) % N;
+    }
+    peak = Math.max(peak * .995, Math.abs(buf[(head - 1 + N) % N]), 0.0001);
+    if (!Number.isFinite(peak)) peak = 1;
 
     ctx.clearRect(0, 0, w, h);
 
@@ -318,8 +321,8 @@ function trace(cv, opts = {}) {
     }
   }
 
-  const job = (dt, now) => { buf[head] = sample(now); head = (head + 1) % N; paint(); };
-  job._redraw = paint;
+  const job = () => paint(true);
+  job._redraw = () => paint(false);
   whileVisible(cv, job);
 }
 
