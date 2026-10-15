@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inventis Labs — Earthquake Early Warning, Built Here</title>
+<meta name="description" content="Inventis Labs operates India's first indigenous mass IoT regional earthquake early warning system and structural health monitoring network — delivering actionable seconds to 100 million+ people before the shaking arrives.">
+<meta name="theme-color" content="#08090B">
+<meta property="og:title" content="Inventis Labs — Earthquake Early Warning, Built Here">
+<meta property="og:description" content="India's first indigenous mass IoT regional earthquake early warning system.">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2308090B'/%3E%3Cpath d='M2 16h6l3-9 4 18 4-13 3 4h8' stroke='%23FF6A1A' stroke-width='2' fill='none' stroke-linejoin='round'/%3E%3C/svg%3E">
+</head>
+<body>
+
+<!-- ═══ SCROLL PROGRESS ═══ -->
+<div class="progress" aria-hidden="true"><i data-progress></i></div>
+
+<!-- ═══ NAV ═══ -->
+<header class="nav" data-nav>
+  <a class="nav__mark" href="#overview" aria-label="Inventis Labs home">
+    <span class="nav__glyph" aria-hidden="true">
+      <svg viewBox="0 0 40 16"><path d="M0 8h7l3-6 4 12 4-9 3 3h19" /></svg>
+    </span>
+    <span class="nav__word">Inventis<span> Labs</span></span>
+  </a>
+
+  <nav class="nav__links" aria-label="Sections">
+    <a href="#mechanism" data-navlink>Mechanism</a>
+    <a href="#solutions" data-navlink>Solutions</a>
+    <a href="#coverage" data-navlink>Coverage</a>
+    <a href="#impact" data-navlink>Impact</a>
+    <a href="#origin" data-navlink>Origin</a>
+    <a href="#platform" data-navlink>Platform</a>
+    <a href="#people" data-navlink>People</a>
+  </nav>
+
+  <div class="nav__right">
+    <span class="live" title="Network status">
+      <i class="live__dot"></i><em data-uptime>99.9%</em>
+    </span>
+    <a class="btn btn--sm" href="#pilot">Pilot With Us</a>
+    <button class="nav__toggle" data-menu-toggle aria-label="Open menu" aria-expanded="false">
+      <i></i><i></i>
+    </button>
+  </div>
+</header>
+
+<div class="sheet" data-menu hidden>
+  <div class="sheet__inner">
+    <a href="#mechanism">Mechanism</a>
+    <a href="#solutions">Solutions</a>
+    <a href="#coverage">Coverage</a>
+    <a href="#impact">Impact</a>
+    <a href="#origin">Origin</a>
+    <a href="#platform">Platform</a>
+    <a href="#people">People</a>
+    <a href="#briefs">Briefs</a>
+    <a href="#pilot">Pilot With Us</a>
+  </div>
+</div>
+
+<main>
+
+<!-- ══════════ HERO ══════════ -->
+<section class="hero" id="overview">
+  <canvas class="hero__trace" data-hero-trace aria-hidden="true"></canvas>
+  <div class="hero__grid" aria-hidden="true"></div>
+
+  <div class="wrap hero__wrap">
+    <div class="tagline" data-reveal>
+      <span class="tagline__id">SYS—01</span>
+      <span class="tagline__tx">EQ-Alert · Regional Early Warning Network</span>
+      <span class="tagline__st"><i class="live__dot"></i>Armed</span>
+    </div>
+
+    <h1 class="hero__h1">
+      <span class="line" data-reveal style="--d:0ms">The shaking</span>
+      <span class="line" data-reveal style="--d:70ms">is inevitable.</span>
+      <span class="line hero__h1--em" data-reveal style="--d:140ms">The warning isn't.</span>
+    </h1>
+
+    <div class="hero__foot">
+      <p class="hero__lede" data-reveal style="--d:220ms">
+        Inventis Labs operates India's first indigenous mass IoT regional earthquake early
+        warning system. Networked MEMS sensors detect the primary wave at the edge, and edge
+        algorithms push actionable warnings to sirens, phones and control rooms — before the
+        destructive shaking arrives.
+      </p>
+
+      <div class="hero__acts" data-reveal style="--d:280ms">
+        <a class="btn btn--primary" href="#pilot">
+          Deploy EQ-Alert
+          <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+        </a>
+        <a class="btn" href="#mechanism">See how it works</a>
+      </div>
+    </div>
+
+    <dl class="hero__stats" data-reveal style="--d:340ms">
+      <div><dt>Lead time</dt><dd class="num">10–30<small>s</small></dd></div>
+      <div><dt>Land at risk</dt><dd class="num">59<small>%</small></dd></div>
+      <div><dt>Always on</dt><dd class="num">24<small>/7</small></dd></div>
+      <div><dt>Indigenous</dt><dd class="num">100<small>%</small></dd></div>
+    </dl>
+  </div>
+
+  <div class="hero__rail" aria-hidden="true">
+    <span>10–30 s of usable lead time</span>
+    <span>P-wave detected at source</span>
+    <span>Warning propagated at the edge</span>
+    <span>S-wave arrives — population already down</span>
+  </div>
+</section>
+
+<!-- ══════════ LIVE TICKER ══════════ -->
+<div class="ticker" data-ticker aria-hidden="true">
+  <div class="ticker__track">
+    <div class="ticker__set">
+      <span><i class="live__dot"></i>Network Live</span><b>1,342</b><span>Sensors Online</span>
+      <b>7</b><span>Active Regions</span><b>12</b><span>States &amp; UTs</span>
+      <b>99.9%</b><span>Uptime</span><b>&lt;8 ms</b><span>Edge Latency</span>
+      <b>Zone IV–V</b><span>Priority Coverage</span><b>100%</b><span>Indigenous Stack</span>
+    </div>
+    <div class="ticker__set">
+      <span><i class="live__dot"></i>Network Live</span><b>1,342</b><span>Sensors Online</span>
+      <b>7</b><span>Active Regions</span><b>12</b><span>States &amp; UTs</span>
+      <b>99.9%</b><span>Uptime</span><b>&lt;8 ms</b><span>Edge Latency</span>
+      <b>Zone IV–V</b><span>Priority Coverage</span><b>100%</b><span>Indigenous Stack</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ THE GAP ══════════ -->
+<section class="sec sec--gap" id="gap">
+  <div class="wrap gap__wrap">
+    <div class="gap__lead">
+      <span class="eyebrow" data-reveal><i>01</i> The Gap</span>
+      <h2 class="h2" data-reveal>India lies in one of the world's most seismically active zones. Over <em>59%</em> of the landmass is exposed to moderate-to-severe earthquakes.</h2>
+    </div>
+
+    <div class="gap__body">
+      <p data-reveal>
+        Seismic zones IV and V cover the Himalayan belt, the Gujarat margin, the Northeast and
+        the Narmada–Son lineament — dense population centres, ports, refineries, nuclear
+        installations and hospitals, all sitting on active fault systems.
+      </p>
+      <p data-reveal>
+        An earthquake cannot be stopped. But the interval between the fault rupturing and the
+        ground moving can be measured — and that interval is enough time to stop a gas line,
+        halt an elevator, take a hospital off mains power, and get a hundred thousand people
+        under a table.
+      </p>
+    </div>
+
+    <ul class="gap__acts">
+      <li data-reveal><span class="glyph" data-g="warn"></span>
+        <b>Automated shutdown</b>
+        <p>Critical machinery, gas lines and nuclear facilities halt on command.</p>
+      </li>
+      <li data-reveal><span class="glyph" data-g="siren"></span>
+        <b>Mass public alert</b>
+        <p>Sirens, mobile apps, SMS and radio broadcast simultaneously.</p>
+      </li>
+      <li data-reveal><span class="glyph" data-g="shield"></span>
+        <b>Drop, Cover, Hold On</b>
+        <p>Coordinated human response while the building is still standing.</p>
+      </li>
+    </ul>
+
+    <p class="gap__note" data-reveal>Every second counts in saving lives and protecting infrastructure.</p>
+  </div>
+</section>
+
+<!-- ══════════ MECHANISM ══════════ -->
+<section class="sec sec--mech" id="mechanism">
+  <div class="wrap">
+    <header class="sechead">
+      <span class="eyebrow" data-reveal><i>02</i> Mechanism</span>
+      <h2 class="h2 h2--wide" data-reveal>From P-wave detection to mass notification in milliseconds.</h2>
+      <p class="sechead__lede" data-reveal>Primary waves travel faster than the destructive secondary waves. That physical fact is the entire product.</p>
+    </header>
+  </div>
+
+  <div class="player" data-player>
+    <div class="wrap">
+      <div class="player__screen" data-reveal>
+        <div class="player__hud">
+          <span>SEQ—A17 · HYPOTHETICAL EVENT</span>
+          <span class="player__clock"><b data-player-time>0.0</b>s</span>
+          <span class="player__state" data-player-state>STANDBY</span>
+        </div>
+        <canvas data-player-canvas></canvas>
+        <div class="player__bar"><i data-player-fill></i></div>
+        <button class="player__scrub" data-player-track aria-label="Scrub event timeline">
+          <i data-player-knob></i>
+        </button>
+      </div>
+
+      <ol class="steps" data-steps>
+        <li class="step" data-reveal>
+          <span class="step__n">01</span>
+          <div>
+            <b>Sensors detect P-waves instantly</b>
+            <p>Networked nodes register the initial, non-damaging Primary wave — faster than the shear wave that destroys.</p>
+          </div>
+        </li>
+        <li class="step" data-reveal>
+          <span class="step__n">02</span>
+          <div>
+            <b>Algorithms analyse magnitude and location</b>
+            <p>Inference runs at the edge or in the cloud, filtering false positives from traffic, construction and quarry blasts.</p>
+          </div>
+        </li>
+        <li class="step" data-reveal>
+          <span class="step__n">03</span>
+          <div>
+            <b>Warning sent to the region in milliseconds</b>
+            <p>Sirens, mobile apps and control systems fire before the destructive wave has moved a kilometre.</p>
+          </div>
+        </li>
+        <li class="step" data-reveal>
+          <span class="step__n">04</span>
+          <div>
+            <b>Critical systems respond automatically</b>
+            <p>Gas valves shut, elevators floor, plants enter safe mode, PA systems instruct staff.</p>
+          </div>
+        </li>
+        <li class="step" data-reveal>
+          <span class="step__n">05</span>
+          <div>
+            <b>S-waves arrive — population already prepared</b>
+            <p>The shaking hits an organised, warned population rather than an unwarned one.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ SOLUTIONS ══════════ -->
+<section class="sec sec--sols" id="solutions">
+  <div class="wrap">
+    <header class="sechead sechead--split">
+      <div>
+        <span class="eyebrow" data-reveal><i>03</i> Solutions</span>
+        <h2 class="h2 h2--wide" data-reveal>Three disciplines, one instrumentation stack.</h2>
+      </div>
+      <div class="sechead__ctl">
+        <button class="arrow" data-sols-prev aria-label="Previous solution"><svg viewBox="0 0 16 16" width="15" height="15"><path d="M10 3L5 8l5 5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+        <button class="arrow" data-sols-next aria-label="Next solution"><svg viewBox="0 0 16 16" width="15" height="15"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+      </div>
+    </header>
+  </div>
+
+  <div class="rail" data-sols-rail>
+    <article class="panel" data-accent="amber" data-reveal>
+      <div class="panel__idx">01 / EQ-ALERT</div>
+      <h3 class="panel__h">Earthquake Early Warning</h3>
+      <p class="panel__p">A state-of-the-art, indigenous early warning system that detects primary seismic waves to provide crucial seconds of warning before destructive shaking arrives.</p>
+
+      <div class="panel__tabs" data-tabs>
+        <button class="is-on" data-tab="0">For Governments &amp; Authorities</button>
+        <button data-tab="1">For Industry &amp; Infrastructure</button>
+      </div>
+      <ul class="panel__list" data-tabpanel>
+        <li><b>City &amp; state-wide protection</b>Mass alerting via sirens and public broadcast systems.</li>
+        <li><b>Emergency Operations Centre integration</b>Real-time shake maps for rapid response deployment.</li>
+        <li><b>Public safety app integration</b>Push notifications routed by geofence.</li>
+      </ul>
+      <ul class="panel__list" data-tabpanel hidden>
+        <li><b>Operational continuity &amp; safety</b>Automated shutdown of gas valves and hazardous lines.</li>
+        <li><b>Controlled elevator stopping</b>Cars floor at the nearest storey and open doors.</li>
+        <li><b>Plant safe-mode activation</b>Employee notification over PA before the first S-wave.</li>
+      </ul>
+
+      <div class="panel__flow" aria-hidden="true">
+        <span>Detect</span><i></i><span>Decide</span><i></i><span>Broadcast</span><i></i><span>Act</span>
+      </div>
+      <a class="panel__link" href="#pilot">Learn more about EQ-Alert</a>
+    </article>
+
+    <article class="panel" data-accent="blue" data-reveal>
+      <div class="panel__idx">02 / SHM</div>
+      <h3 class="panel__h">Structural &amp; Geotechnical Monitoring</h3>
+      <p class="panel__p">Continuous, intelligent sensing for bridges, high-rise buildings, dams and industrial foundations. Detect tilt, vibration and stress anomalies before they become critical failures.</p>
+
+      <blockquote class="panel__quote">Fully integrable with the EQ-Alert network to provide automated structural soundness assessments post-earthquake.</blockquote>
+
+      <ul class="chips">
+        <li>Foundation settlement</li>
+        <li>Resonance &amp; fatigue</li>
+        <li>Seismic response</li>
+        <li>Strain &amp; tilt</li>
+        <li>Seepage &amp; micro-cracks</li>
+        <li>Cyclic load bases</li>
+      </ul>
+
+      <div class="spec">
+        <div><span>01</span>High-resolution accelerometers, strain gauges and geotechnical sensors installed on the structure.</div>
+        <div><span>02</span>Resilient data pipelines stream sensor data from the field in real time.</div>
+        <div><span>03</span>Machine-learning models detect abnormal behaviour and long-term degradation.</div>
+        <div><span>04</span>Engineers receive health scores, alerts and trend insight via dashboard.</div>
+      </div>
+      <a class="panel__link" href="#pilot">Learn more about Structural Monitoring</a>
+    </article>
+
+    <article class="panel" data-accent="violet" data-reveal>
+      <div class="panel__idx">03 / LAB</div>
+      <h3 class="panel__h">Embedded &amp; IoT Engineering Lab</h3>
+      <p class="panel__p">Full-stack IoT product development from concept to production — hardware, firmware, cloud, and mobile apps. We handle every layer of the stack.</p>
+
+      <div class="stack">
+        <div><b>Hardware</b><span>Custom PCB design, sensor integration, low-power embedded systems, WiFi / BLE / LoRa / Cellular.</span></div>
+        <div><b>Firmware</b><span>Real-time embedded software, edge AI/ML, secure boot, OTA updates, sensor fusion.</span></div>
+        <div><b>Cloud</b><span>Scalable backend APIs, real-time pipelines, device management, secure authentication.</span></div>
+        <div><b>Apps</b><span>Cross-platform iOS/Android, real-time dashboards, remote device control.</span></div>
+      </div>
+
+      <ul class="chips">
+        <li>Crack detection</li><li>Load monitoring</li><li>Firmware development</li>
+        <li>Industrial integration</li><li>Secure comms</li><li>Edge AI</li>
+      </ul>
+
+      <div class="stack">
+        <div><b>01 · Discover</b><span>Requirements, architecture, technical specification.</span></div>
+        <div><b>02 · Prototype</b><span>Working builds that validate the concept with stakeholders.</span></div>
+        <div><b>03 · Build</b><span>Full-stack development, testing, security audits, performance work.</span></div>
+        <div><b>04 · Sustain</b><span>Manufacturing support, deployment, documentation, maintenance.</span></div>
+      </div>
+      <a class="panel__link" href="#pilot">Discuss a hardware project</a>
+    </article>
+  </div>
+</section>
+
+<!-- ══════════ COVERAGE ══════════ -->
+<section class="sec sec--cov" id="coverage">
+  <div class="wrap">
+    <header class="sechead">
+      <span class="eyebrow" data-reveal><i>04</i> Coverage</span>
+      <h2 class="h2 h2--wide" data-reveal>Deployed where the shaking is.</h2>
+      <p class="sechead__lede" data-reveal>Sites prioritised by seismic zone, population density and critical-asset concentration.</p>
+    </header>
+
+    <div class="cov">
+      <div class="cov__map" data-reveal>
+        <canvas data-map aria-label="Sensor deployment map of India"></canvas>
+        <div class="cov__legend">
+          <span><i class="sw" style="--c:var(--red)"></i>Zone V</span>
+          <span><i class="sw" style="--c:var(--amber)"></i>Zone IV</span>
+          <span><i class="sw" style="--c:var(--cyan)"></i>Zone III</span>
+          <span><i class="sw sw--live"></i>Live node</span>
+        </div>
+      </div>
+
+      <div class="cov__list">
+        <article class="region" data-region="n" data-reveal>
+          <span class="region__c" style="--c:var(--red)">450+</span>
+          <h3>Northern Region <em>Zone IV–V</em></h3>
+          <p>Critical coverage for the Himalayan belt, including Delhi NCR, Uttarakhand and Himachal Pradesh.</p>
+        </article>
+        <article class="region" data-region="w" data-reveal>
+          <span class="region__c" style="--c:var(--amber)">350+</span>
+          <h3>Western Region <em>Zone III–IV</em></h3>
+          <p>Extensive sensor grid covering Kutch and Gujarat, extending down to Mumbai and Pune.</p>
+        </article>
+        <article class="region" data-region="e" data-reveal>
+          <span class="region__c" style="--c:var(--violet)">300+</span>
+          <h3>Eastern Region <em>Zone V</em></h3>
+          <p>High-density deployment in Assam, Meghalaya and the Shillong Plateau.</p>
+        </article>
+        <article class="region" data-region="c" data-reveal>
+          <span class="region__c" style="--c:var(--blue)">200+</span>
+          <h3>Central Region <em>Zone III</em></h3>
+          <p>Monitoring the Narmada–Son lineament and seismically active zones on the MP / Maharashtra border.</p>
+        </article>
+      </div>
+    </div>
+
+    <div class="cov__push" data-reveal>
+      <b>500+</b>
+      <span>new sensors actively being deployed across Southern India this quarter.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ IMPACT ══════════ -->
+<section class="sec sec--impact" id="impact">
+  <div class="wrap">
+    <header class="sechead">
+      <span class="eyebrow" data-reveal><i>05</i> Impact</span>
+      <h2 class="h2 h2--wide" data-reveal>Making India safer, one node at a time.</h2>
+    </header>
+
+    <div class="counters">
+      <div class="counter" data-reveal>
+        <b class="num"><span data-count="1300">0</span>+</b>
+        <span>Active sensor nodes</span>
+        <p>A live mesh across seven operating regions, not a pilot.</p>
+      </div>
+      <div class="counter" data-reveal>
+        <b class="num"><span data-count="4">0</span></b>
+        <span>Seismic regions covered</span>
+        <p>Northern, Western, Eastern and Central grids.</p>
+      </div>
+      <div class="counter" data-reveal>
+        <b class="num"><span data-count="12">0</span></b>
+        <span>States &amp; union territories</span>
+        <p>With Southern India in active rollout.</p>
+      </div>
+      <div class="counter" data-reveal>
+        <b class="num"><span data-count="100">0</span>M+</b>
+        <span>People under coverage</span>
+        <p>Reachable by app, SMS, siren or broadcast.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ ORIGIN ══════════ -->
+<section class="sec sec--origin" id="origin">
+  <div class="wrap origin">
+    <div class="origin__story">
+      <span class="eyebrow" data-reveal><i>06</i> Origin</span>
+      <h2 class="h2" data-reveal>Born from necessity, not from a pitch deck.</h2>
+      <p data-reveal>Inventis Labs is not a typical Silicon Valley-style startup. We are a <b>deep-tech company rooted in Uttar Pradesh</b>, driven by the reality of India's seismic vulnerability.</p>
+      <p data-reveal>Seeing the gaps in existing disaster management infrastructure, we set out to build something technologically advanced that was also <b>economically viable for mass deployment</b> in Indian cities.</p>
+      <p data-reveal>Working closely with research guidance from <b>IIT Roorkee's Earthquake Engineering department</b>, we developed a system that rivals global standards while being 100% indigenous.</p>
+    </div>
+
+    <div class="origin__rail" data-reveal>
+      <h3 class="mini">Our journey</h3>
+      <ol class="timeline">
+        <li><b>2021</b><span>Concept &amp; early R&amp;D. Validating MEMS sensor feasibility for Indian conditions.</span></li>
+        <li><b>2023</b><span>Field-ready prototypes and lab testing at IIT Roorkee. First successful pilot deployments.</span></li>
+        <li><b>Today</b><span>Commercial launch of EQ-Alert, policy engagement, and expansion to 1,300+ sensor nodes.</span></li>
+      </ol>
+
+      <h3 class="mini mini--gap">Research pipeline</h3>
+      <ul class="pipe">
+        <li><b>01</b><span>Guidance from IIT Roorkee, Dept. of Earthquake Engineering.</span></li>
+        <li><b>02</b><span>Shake-table verification and sensor calibration.</span></li>
+        <li><b>03</b><span>Real-world feedback loops and AI model tuning.</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="wrap mission">
+    <div class="mission__card" data-reveal>
+      <span class="mini">Our Mission</span>
+      <p>To democratise access to life-saving early warning technology and build a resilient India through indigenous innovation. We are committed to protecting lives and infrastructure in seismically vulnerable regions.</p>
+    </div>
+    <div class="mission__card" data-reveal>
+      <span class="mini">Our Vision</span>
+      <p>To establish India as a global leader in earthquake early warning and structural monitoring, setting new standards for disaster preparedness across emerging economies.</p>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <ul class="values">
+      <li data-reveal><b>01</b><span>Safety First</span><p>Every decision is driven by our commitment to protecting lives and critical infrastructure.</p></li>
+      <li data-reveal><b>02</b><span>Innovation</span><p>We push the boundaries of what is possible with indigenous technology and engineering excellence.</p></li>
+      <li data-reveal><b>03</b><span>Scalability</span><p>Solutions that deploy nationwide without compromising quality or performance.</p></li>
+      <li data-reveal><b>04</b><span>Excellence</span><p>The highest standards in engineering, testing and deployment of our systems.</p></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ══════════ PLATFORM ══════════ -->
+<section class="sec sec--plat" id="platform">
+  <div class="wrap plat">
+    <div class="plat__copy">
+      <span class="eyebrow" data-reveal><i>07</i> Platform</span>
+      <h2 class="h2" data-reveal>Indigenous hardware architecture.</h2>
+      <p data-reveal>Designed in India, for India. The hardware is built to withstand extreme environmental conditions while maintaining high-fidelity data acquisition.</p>
+      <p data-reveal>Unlike imported black-box solutions, the modular architecture allows seamless upgrades, multi-hazard sensing integration, and full data sovereignty.</p>
+      <dl class="kv" data-reveal>
+        <div><dt>Acquisition</dt><dd>24-bit seismometer front-end</dd></div>
+        <div><dt>Compute</dt><dd>Edge inference, &lt;8 ms loop</dd></div>
+        <div><dt>Link</dt><dd>LoRa / LTE / WiFi mesh</dd></div>
+        <div><dt>Power</dt><dd>Solar + Li-ion, 18-month autonomy</dd></div>
+        <div><dt>Enclosure</dt><dd>IP67, −20 °C to 70 °C</dd></div>
+        <div><dt>Security</dt><dd>Secure boot, signed OTA</dd></div>
+      </dl>
+    </div>
+
+    <div class="plat__viz" data-reveal>
+      <div class="scope">
+        <canvas data-scope aria-hidden="true"></canvas>
+        <span class="scope__l scope__l--t">NODE OUTPUT · 200 Hz</span>
+        <span class="scope__l scope__l--b">EDGE INFERENCE · CLASSIFY → DISPATCH</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ DEPLOY ══════════ -->
+<section class="sec sec--deploy" id="deploy">
+  <div class="wrap">
+    <header class="sechead">
+      <span class="eyebrow" data-reveal><i>08</i> Deployment</span>
+      <h2 class="h2 h2--wide" data-reveal>Built for two kinds of operator.</h2>
+    </header>
+
+    <div class="deploy">
+      <article class="deploy__card" data-accent="blue" data-reveal>
+        <h3>Government &amp; Disaster Authorities</h3>
+        <p>Empower state and national disaster management teams with regional early warning capability across millions of citizens.</p>
+        <ul>
+          <li><b>Sensor array deployment</b>Arrays across vulnerable zones for citywide or state-level coverage.</li>
+          <li><b>Mass public alert systems</b>Sirens, SMS gateways, mobile apps and radio — instantly.</li>
+          <li><b>Command centre dashboards</b>Real-time monitoring and coordination for control rooms.</li>
+          <li><b>Data analytics &amp; reporting</b>Historical event logs and post-incident reporting for policy.</li>
+        </ul>
+      </article>
+      <article class="deploy__card" data-accent="amber" data-reveal>
+        <h3>Industry &amp; Infrastructure Operators</h3>
+        <p>Safeguard critical infrastructure and industrial operations with automated shutdown protocols.</p>
+        <ul>
+          <li><b>Site-specific early warning</b>Customised EEW for factories, power plants, chemical facilities.</li>
+          <li><b>Automated safety protocols</b>Trigger gas line shutdowns, elevator halts, machinery stop sequences.</li>
+          <li><b>SCADA integration</b>API-based integration with existing control systems and IoT platforms.</li>
+          <li><b>Asset &amp; personnel protection</b>Protect high-value equipment, warn workers with margin.</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ PEOPLE ══════════ -->
+<section class="sec sec--people" id="people">
+  <div class="wrap">
+    <header class="sechead">
+      <span class="eyebrow" data-reveal><i>09</i> People</span>
+      <h2 class="h2 h2--wide" data-reveal>A small team with a long duty cycle.</h2>
+      <p class="sechead__lede" data-reveal>Engineers, researchers and operators committed to disaster resilience.</p>
+    </header>
+
+    <ul class="team">
+      <li data-reveal>
+        <span class="team__ini">RS</span>
+        <b>Rahul Singh</b>
+        <em>Co-founder &amp; EEW Systems Lead</em>
+        <p>Ex-IoT engineer with 8+ years in sensor networks. Leads EQ-Alert architecture and deployment strategy.</p>
+      </li>
+      <li data-reveal>
+        <span class="team__ini">PS</span>
+        <b>Priya Sharma</b>
+        <em>Head of Operations</em>
+        <p>Drives public-private partnerships and government liaison. Former consultant at NITI Aayog.</p>
+      </li>
+      <li data-reveal>
+        <span class="team__ini">AV</span>
+        <b>Amit Verma</b>
+        <em>Lead Firmware Engineer</em>
+        <p>Embedded systems specialist in real-time processing. IIT Roorkee alumnus with edge computing depth.</p>
+      </li>
+    </ul>
+
+    <h3 class="mini mini--center" data-reveal>Collaborating with</h3>
+    <ul class="partners">
+      <li data-reveal style="--c:#003d82">IIT Roorkee</li>
+      <li data-reveal style="--c:#b91c1c">ASSOCHAM</li>
+      <li data-reveal style="--c:#1e40af">IIIT Lucknow</li>
+      <li data-reveal style="--c:#ea580c">Startup India</li>
+      <li data-reveal style="--c:#991b1b">NDMA</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ══════════ BRIEFS ══════════ -->
+<section class="sec sec--briefs" id="briefs">
+  <div class="wrap">
+    <header class="sechead">
+      <span class="eyebrow" data-reveal><i>10</i> Briefs</span>
+      <h2 class="h2 h2--wide" data-reveal>Documents for policymakers and partners.</h2>
+    </header>
+
+    <div class="briefs">
+      <a class="brief" href="#pilot" data-reveal>
+        <span class="brief__kind">Proposal · Dec 2024</span>
+        <b>ASSOCHAM UP — EQ-Alert Pilot Proposal</b>
+        <p>A comprehensive proposal for deploying state-wide earthquake early warning systems in Uttar Pradesh.</p>
+        <span class="brief__cta">Request briefing</span>
+      </a>
+      <a class="brief" href="#pilot" data-reveal>
+        <span class="brief__kind">Concept note</span>
+        <b>NTM–GREAT: Smart Geotechnical Textiles</b>
+        <p>Technical concept note on integrating IoT sensors with geotechnical textiles for infrastructure safety.</p>
+        <span class="brief__cta">Request briefing</span>
+      </a>
+      <a class="brief" href="#pilot" data-reveal>
+        <span class="brief__kind">Explainer</span>
+        <b>What is EEW?</b>
+        <p>A simple guide to P-waves, S-waves and the warning times that follow.</p>
+        <span class="brief__cta">Read</span>
+      </a>
+      <a class="brief" href="#pilot" data-reveal>
+        <span class="brief__kind">Spec sheet</span>
+        <b>Hardware reference</b>
+        <p>Detailed specifications of EQ-Alert sensors, sirens and gateway units.</p>
+        <span class="brief__cta">Request sheet</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ PILOT / CONTACT ══════════ -->
+<section class="sec sec--pilot" id="pilot">
+  <div class="wrap pilot">
+    <div class="pilot__copy">
+      <span class="eyebrow eyebrow--inv" data-reveal><i>11</i> Deploy</span>
+      <h2 class="h2 h2--inv" data-reveal>Pilot EQ-Alert in your region or plant.</h2>
+      <p data-reveal>Share your requirements. The Inventis Labs team will follow up with a tailored pilot or deployment plan — typically within one working day.</p>
+
+      <ul class="contact" data-reveal>
+        <li>
+          <span>Direct</span>
+          <a href="mailto:support@inventislabs.com">support@inventislabs.com</a>
+        </li>
+        <li>
+          <span>Voice</span>
+          <a href="tel:+917011254007">+91 70112 54007</a>
+        </li>
+        <li>
+          <span>Registered office</span>
+          <address>InventisLabs Pvt. Ltd.<br>A-44 Vasundhara, Chinhat<br>Lucknow — 226028</address>
+        </li>
+      </ul>
+    </div>
+
+    <form class="form" data-pilot-form data-reveal novalidate>
+      <div class="form__head">
+        <span>REQUEST A PILOT</span>
+        <span class="form__step">01 — 04</span>
+      </div>
+
+      <label class="field">
+        <span>Name</span>
+        <input type="text" name="name" autocomplete="name" required placeholder="Full name">
+      </label>
+
+      <label class="field">
+        <span>Work email</span>
+        <input type="email" name="email" autocomplete="email" required placeholder="you@organisation.gov.in">
+      </label>
+
+      <div class="field-row">
+        <label class="field">
+          <span>Organisation</span>
+          <input type="text" name="org" autocomplete="organization" placeholder="Department or company">
+        </label>
+        <label class="field">
+          <span>Phone</span>
+          <input type="tel" name="phone" autocomplete="tel" placeholder="+91">
+        </label>
+      </div>
+
+      <label class="field">
+        <span>Deployment type</span>
+        <select name="mode">
+          <option>City / Smart City EEW</option>
+          <option>Industrial Plant EEW</option>
+          <option>Structural Health Monitoring</option>
+          <option>IoT Development</option>
+        </select>
+      </label>
+
+      <label class="field">
+        <span>Requirements</span>
+        <textarea name="msg" rows="4" placeholder="Tell us about your pilot needs…"></textarea>
+      </label>
+
+      <label class="check">
+        <input type="checkbox" name="agree" required>
+        <span>I agree to the <a href="#legal">Terms of Service</a> and <a href="#legal">Privacy Policy</a>.</span>
+      </label>
+
+      <button class="btn btn--primary btn--full" type="submit">
+        <span data-submit-label>Transmit request</span>
+      </button>
+      <p class="form__note" data-form-note role="status"></p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer class="foot" id="legal">
+  <div class="wrap">
+    <div class="foot__top">
+      <div class="foot__brand">
+        <span class="nav__glyph nav__glyph--lg" aria-hidden="true">
+          <svg viewBox="0 0 40 16"><path d="M0 8h7l3-6 4 12 4-9 3 3h19" /></svg>
+        </span>
+        <b>Inventis Labs</b>
+        <p>India's first mass IoT regional earthquake early warning system — protecting lives with advance notification.</p>
+      </div>
+
+      <nav class="foot__cols" aria-label="Footer">
+        <div>
+          <span class="mini">Navigate</span>
+          <a href="#mechanism">Mechanism</a>
+          <a href="#solutions">Solutions</a>
+          <a href="#coverage">Coverage</a>
+          <a href="#impact">Impact</a>
+          <a href="#people">People</a>
+        </div>
+        <div>
+          <span class="mini">Solutions</span>
+          <a href="#solutions">EQ-Alert EEW</a>
+          <a href="#solutions">Structural Monitoring</a>
+          <a href="#solutions">IoT Engineering Lab</a>
+          <a href="#deploy">For Government</a>
+          <a href="#deploy">For Industry</a>
+        </div>
+        <div>
+          <span class="mini">Contact</span>
+          <a href="mailto:support@inventislabs.com">support@inventislabs.com</a>
+          <a href="tel:+917011254007">+91 70112 54007</a>
+          <span class="foot__addr">A-44 Vasundhara, Chinhat<br>Lucknow — 226028</span>
+        </div>
+      </nav>
+    </div>
+
+    <div class="foot__bot">
+      <span>© <span data-year>2026</span> InventisLabs Pvt. Ltd. All rights reserved.</span>
+      <span class="foot__legal">
+        <a href="#legal">Terms of Service</a>
+        <a href="#legal">Privacy Policy</a>
+        <a href="#legal">Cookie Policy</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
